@@ -127,6 +127,45 @@ The modified connections to the osciloscopes are listed in the table below:
 
 Additionally, the resistors for the "whole" and Hα detectors have been changed to $100\text{ k}\Omega$.
 
+### Applied load resistor values as of 1.5.2026
+
+| Channel | Spectral Line | Resistance |
+| ------- | ------------- | ---------- |
+| ch1     | He I          | 1 MΩ       |
+| ch2     | O I           | 1 MΩ       |
+| ch3     | N II          | 1 MΩ       |
+| ch4     | C II          | 1 MΩ       |
+| ch5     | Hβ            | 1 MΩ       |
+| ch6     | Whole         | 250 kΩ     |
+| ch7     | Hγ            | 1 MΩ       |
+| ch8     | Hα            | 250 kΩ     |
+
+### Bandwidth increase attempt with the AIM-TTi WA301 amplifier (4.5.2026)
+
+Instead of a load resistor, the output of the Hα photodiode has been connected directly to the AIM-TTi WA301 voltage amplifier. This amplifier has an input impedance of 10 kΩ and a gain of 10, resulting in a total bandwidth of 100 kHz and amplification of 100 kV/A. This configuration has been tested during shot #52366. Next, the NI 9222 DAW has been temporarily replaced with the Tektronik MSO64 oscilloscope, with 16-bit resolution and 600 MS/s sampling rate, mainly due to the increase D/A conversion resolution. However, this measurement has been unsuccessfull.
+
+### Assembly and testing of a OPA197-based transimpedance amplyfier circuit (27.5.2026)
+
+A new transimpedance amplyfier circuit has been designed with a gain of $10^6 \text{V/A}$ and a bandwidth of 100 kHz. The schema is displayed below.
+![Circuit schema of an OP197-based transimpedance amplyfier](OPA197-TA.png)
+
+A signal generator set to 100 mV with a 1 MΩ series ressistor has been used as a current source to test step response and noise floor. The results of the step response test and FODP fit are below.
+
+![Plot of step input and system response](og_amp_step.png)
+![Plot of FODP fit](og_amp_bode.png)
+
+### Further testing of the transimpedance amplyfier circuit (28.5.2026)
+
+The threshold frequency of the amplyfier has been determined to be **150 kHz** from a bode plot measured by Rigol MSO5074. The current source has been modeled by a 1MΩ resistor on the input to the TIA and 1V input voltage.
+
+The TIA has been installed at the output of the broad spectrum photodiode and tested on the shot #52880. The measured waveform can be found on ch8 (not ch6) of the fast spectroscope DAQ.
+
+### Faraday cage installation and noise density measurement (29.5.2026)
+
+The spectroscope has been placed inside a metal enclosure to shield it from RF interference and its noise voltage density has been tested with floating input and determined to be 10 000 $\mu \textrm{V} / \sqrt{\textrm{Hz}}$, which is about tho orders of magnitude more than it should be.
+
+During the attempt to find the source of the noise, the TIA blew up :(
+
 ## Concluding report
 
 The final presentation is available [here](<New fast spectroscopy diagnostic at GOLEM - results.pdf>).
@@ -135,10 +174,10 @@ The final presentation is available [here](<New fast spectroscopy diagnostic at 
 
 1. Increase signal intensity / decrease interference
 2. Increase the detection sensitivity (e.g. using Photomultiplier tubes)
-3. ~Restrict the field of view~ - this has been shown to decrease intensity too much
+3. ~Restrict the field of view~ - this has been shown to decrease intensity too much (Štěpán Hladík)
 4. We could just get rid of the splitters, doubling the sensitivity
-5. Compare measurements from fast cameras, slow spectrometers and fast spectrometer
-6. Assemble fast spectrometer fo He plasmas
+5. Compare measurements from fast cameras, slow spectrometers and fast spectrometer ✅ (Štěpán Hladík)
+6. Assemble fast spectrometer fo He plasmas ✅ (Štěpán Hladík)
 7. Explore why Whole and He line doesn't agreee with slow spectrometer
 8. Get the response of the fast spectrometer as a Green function
 9. Use optic cables for transfer of digitized data
