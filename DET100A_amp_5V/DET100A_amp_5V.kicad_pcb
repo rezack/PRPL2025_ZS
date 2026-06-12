@@ -1391,13 +1391,13 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "5f97f78b-e081-4d17-8dec-3359187f490d")
-		(at 124.341702 85.5 180)
+		(at 124.341702 85.208177 180)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C4"
 			(at -4.158298 0 0)
 			(layer "F.SilkS")
-			(uuid "5205d9ac-d587-4445-a498-b6918ffb5d1f")
+			(uuid "3acfd669-84c1-4fae-858f-7d92d4d22324")
 			(effects
 				(font
 					(size 1 1)
@@ -1408,7 +1408,7 @@
 		(property "Value" "100n"
 			(at 0 1.68 0)
 			(layer "F.Fab")
-			(uuid "b61412a9-03f4-4be0-987f-bff2d816f381")
+			(uuid "fb61e769-ba26-40ef-bce4-2bad54d54264")
 			(effects
 				(font
 					(size 1 1)
@@ -1420,7 +1420,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "b4974ddc-935b-4448-a99b-e7257eb67e75")
+			(uuid "412bb785-7268-4ef8-ab06-b43b78d08f94")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1431,7 +1431,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4de4c527-2506-4118-8478-3a6bc1a52ce2")
+			(uuid "ffdb6aa4-8e11-44d7-a917-25d62af50e66")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1886,7 +1886,7 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "9e11d1cf-3314-4ecf-8dd7-100c8465d8df")
-		(at 124.341702 87.5)
+		(at 124.341702 87.310361)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C9"
@@ -2372,7 +2372,7 @@
 		(descr "Terminal Block TE 282834-3, 3 pins, pitch 2.54mm, size 8.08x6.5mm, drill diameter 1.1mm, pad diameter 2.1mm, http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F282834%7FC1%7Fpdf%7FEnglish%7FENG_CD_282834_C1.pdf")
 		(tags "THT Terminal Block TE 282834-3 pitch 2.54mm size 8.08x6.5mm drill 1.1mm pad 2.1mm")
 		(property "Reference" "J2"
-			(at -3 0 0)
+			(at 8 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "e7f646c8-003d-4f3d-ac9f-e8bd728eaed2")
 			(effects
@@ -3642,6 +3642,30 @@
 		(layer "Edge.Cuts")
 		(uuid "ba120f77-eafd-48de-9a31-978b7fe20a37")
 	)
+	(gr_text "-5V"
+		(at 110 96.5 0)
+		(layer "F.SilkS")
+		(uuid "94558e59-910a-43eb-9999-731a49397cd2")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "+5V"
+		(at 121.2 96.5 0)
+		(layer "F.SilkS")
+		(uuid "eaf7dee9-5937-441d-a26c-b7335461da5c")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "Tokamak\nGOLEM"
 		(at 139.5 96.5 0)
 		(layer "F.SilkS")
@@ -3649,6 +3673,30 @@
 		(effects
 			(font
 				(size 0.75 0.75)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "IN"
+		(at 102.25 92.75 0)
+		(layer "F.SilkS")
+		(uuid "c87fc994-306e-4fc6-bb3c-2584eb2fde3e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "OUT"
+		(at 145 92.75 0)
+		(layer "F.SilkS")
+		(uuid "b9600cf6-fd71-439f-9441-e6260cb9f323")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.1)
 			)
 			(justify left bottom)
