@@ -1,0 +1,3 @@
+Add 10 degrees to nozzle temperature
+106-108% overfill (6-8% over)
+Slow down the fill by ~25-30%

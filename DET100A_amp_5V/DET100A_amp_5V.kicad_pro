@@ -210,7 +210,8 @@
         }
       ],
       "track_widths": [
-        0.0
+        0.0,
+        0.65
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -462,6 +463,7 @@
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
+      "global_label_dangling": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
       "isolated_pin_label": "warning",
@@ -535,10 +537,14 @@
   },
   "pcbnew": {
     "last_paths": {
+      "gencad": "",
       "idf": "",
       "netlist": "",
       "plot": "",
+      "pos_files": "",
       "specctra_dsn": "",
+      "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -649,6 +655,7 @@
     "meta": {
       "version": 1
     },
+    "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
       "meta": {
@@ -660,6 +667,13 @@
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
+    "space_save_all_events": true,
+    "spice_current_sheet_as_root": false,
+    "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_dissipations": false,
+    "spice_save_all_voltages": false,
     "subpart_first_id": 65,
     "subpart_id_separator": 0,
     "top_level_sheets": [
@@ -669,7 +683,7 @@
         "uuid": "cc9c8bbf-78fe-40b0-b267-f0af5f453cdb"
       }
     ],
-    "used_designators": "",
+    "used_designators": "TP1-2,#PWR7",
     "variants": []
   },
   "sheets": [
